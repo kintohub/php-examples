@@ -5,18 +5,16 @@ require 'vendor/autoload.php';
 $app = new Slim\App();
 
 /**
- * @api {get} /sample/{message} hello world sample request
- * @apiName GetSample
- * @apiParam (Url) {String} message the message to return
- * @apiSuccess (Success_200) {String} data the hello world data
- * @apiSuccess (Success_200) {String} output what the user entered in the url
+ * @api {get} /hello/{name} Prints "Hello {name}"
+ * @apiName HelloWorld
+ * @apiParam (Url) {String} name the name to print
+ * @apiSuccess (200) {String} message the hello {name} message
  */
-$app->get('/sample/{message}', function ($request, $response, $args) {
+$app->get('/hello/{name}', function ($request, $response, $args) {
   $route = $request->getAttribute('route');
-  $message = $route->getArgument('message');
+  $name = $route->getArgument('name');
   return $response->withJson([
-    'data' => 'Hello World',
-    'output' => $message
+    'message' => 'Hello ' . $name
   ]);
 });
 

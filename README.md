@@ -4,7 +4,7 @@ A sample php microservice block for [kintohub](http://kintohub.com)
 
 # First time setup
 
-* run `compose install`
+* run `composer install`
 
 # Run
 
