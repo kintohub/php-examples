@@ -23,7 +23,7 @@ A sample PHP app for [Kintohub](http://kintohub.com)
 - **Repo:** https://github.com/kintohub/php-examples
 - **Branch:** master
 - **Language:** PHP
-- **Language version:** 7.4
+- **Language version:** 7.2
 - **Build Command:** `composer install`
 - **Start Command:** `php -S localhost:80`
 - **Subfolder Path:** `.`
